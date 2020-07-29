@@ -6,8 +6,14 @@ div {
   font-size: 50px;
   width: max-content;
   background-color: yellow;
+  transition: background-color, color 1s linear;
 }
 
 body {
   background-color: black;
+}
+
+div:hover {
+  background-color: black;
+  color: white;
 }
