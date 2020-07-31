@@ -6,14 +6,23 @@ div {
   font-size: 50px;
   width: max-content;
   background-color: yellow;
-  transition: background-color, color 1s linear;
+  transform-origin: center 20vh 0px;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 body {
   background-color: black;
 }
 
-div:hover {
-  background-color: black;
-  color: white;
+@keyframes spin {
+  from {
+
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
