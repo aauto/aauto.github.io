@@ -1,53 +1,60 @@
-.gleiz {
-  margin-top: 63%;
-  font-family: monospace;
-  transform: rotate(90deg) scale(1.5);
-  font-weight: bold;
-  text-align: center;
-  font-size: 5vw;
-  background-color: yellow;
-  position: absolute;
-  width: 100%;
-  transition: 0.5s;
+@keyframes scroll {
+    0% {
+
+    }
+    100% {
+        transform: translate(-300%, 0)
+    }
+}
+
+::selection {
+   background: transparent;
 }
 
 body {
-  background-color: rgb(106, 174, 245);
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100vh;
+  background-color: black;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  overflow-y: hidden;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
-#cont {
-  position: relative;
-  width: 25vw;
+.box {
+  background-color: yellow;
   height: 40vw;
-  background: rgba(0,0,0,1);
-  transform: rotate(-30deg) skew(35deg) scale(.8);
-  transition: 0.5s;
+  width: 40vw;
+  margin: 20px auto;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-#cont:hover .gleiz:nth-child(4) {
-  transform: translate(160px, -160px) rotate(90deg) scale(1.5);
-  opacity: 1;
+.gleiz {
+  font-size: 10vw;
+  padding-top: 40%;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  padding-left: 100%;
 }
 
-#cont:hover .gleiz:nth-child(3) {
-  transform: translate(120px, -120px) rotate(90deg) scale(1.5);
-  opacity: .8;
+input:checked + .gleiz {
+  animation-play-state: paused;
 }
 
-#cont:hover .gleiz:nth-child(2) {
-  transform: translate(80px, -80px) rotate(90deg) scale(1.5);
-  opacity: .6;
+input {
+  display: none;
 }
 
-#cont:hover .gleiz:nth-child(1) {
-  transform: translate(40px, -40px) rotate(90deg) scale(1.5);
-  opacity: .4;
+label {
+  font-size: 3vw;
+  margin-top: 50px;
+  display: block;
+  background-color: white;
+  width: max-content;
+  height: 4vw;
+  border: 2px solid black;
+  padding: 4px;
 }
