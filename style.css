@@ -22,8 +22,8 @@ body {
 
 .box {
   background-color: yellow;
-  height: 40vw;
-  width: 40vw;
+  height: 35vw;
+  width: 35vw;
   margin: 20px auto;
   display: block;
   white-space: nowrap;
